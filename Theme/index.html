@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Many Theme</title>
+</head>
+<body>
+      <label for="theme">Select Your Favourite Theme</label>
+      <select id="theme">
+            <option value="white">white</option>
+            <option value="black">black</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="red">red</option>
+      </select>
+      <p></p>
+</body>
+<script>
+      let select = document.querySelector('select');
+      let html = document.querySelector('html');
+      let pTag = document.querySelector('p');
+      
+      function theme(bgColor,textColor){
+            html.style.background=bgColor;
+            html.style.color=textColor;
+      }
+      select.onchange = function(){
+            switch(select.value){
+            case 'white':
+                  theme('white','black');
+                  pTag.textContent=select.value + "is so amazing theme.";
+                  break;
+            case 'black':
+                  theme('black','white');
+                  pTag.textContent=select.value + "is so amazing theme.";
+                  break;
+            case 'green':
+                  theme('green','yellow');
+                  pTag.textContent=select.value + "is so amazing theme.";
+                  break;
+            case 'yellow':
+                  theme('yellow','red');
+                  pTag.textContent=select.value + "is so amazing theme.";
+                  break;
+            case 'red':
+                  theme('red','black');
+                  pTag.textContent=select.value + "is so amazing theme.";
+                  break;
+
+      }
+      }
+</script>
+</html>
